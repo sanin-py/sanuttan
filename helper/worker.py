@@ -297,7 +297,7 @@ async def encod(event):
         COUNT.remove(user.id)
         await event.client.send_message(
             event.chat_id,
-            f"DOWNLODING COMPLETED!! 🌟",
+            f"DOWNLOADING COMPLETED!! 🌟",
             buttons=[
                 [
                     Button.inline("GENERATE SAMPLE", data=f"gsmpl{key}"),
