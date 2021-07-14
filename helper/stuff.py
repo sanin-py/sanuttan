@@ -29,7 +29,7 @@ async def up(event):
 async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.reply(
-        f"• Hey, `{ok.user.first_name}`\n• This is a CompressorBot which can encode videos.\n• It can compress your videos at a high percentage (normally 70%-80%, but it solely depends upon your video's size and other properties).\n• You can generate Samples and Screenshots of your video as well.\n• Last but not the least, you can get all the basic details regarding your video under the tab 'MEDIA INFO'.\n✦ Enn ningalude swontham @sanin_c.",
+        f"• Hey, `{ok.user.first_name}` ♥️\n• This is a CompressorBot which can encode videos.\n• It can compress your videos at a high percentage (normally 70%-80%, but it solely depends upon your video's size and other properties).\n• You can generate Samples and Screenshots of your video as well.\n• Last but not the least, you can get all the basic details regarding your video under the tab 'MEDIA INFO'.\n✦ Enn ningalude swontham @sanin_c.",
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
@@ -55,7 +55,7 @@ async def ihelp(event):
 async def beck(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.edit(
-        f"• Hey, `{ok.user.first_name}`\n• This is a CompressorBot which can encode videos.\n• It can compress your videos at a high percentage (normally 70%-80%, but it solely depends upon your video's size and other properties).\n• You can generate Samples and Screenshots of your video as well.\n• Last but not the least, you can get all the basic details regarding your video under the tab 'MEDIA INFO'.\n✦ Enn ningalude swontham @sanin_c",
+        f"• Hey, `{ok.user.first_name}` ♥️\n• This is a CompressorBot which can encode videos.\n• It can compress your videos at a high percentage (normally 70%-80%, but it solely depends upon your video's size and other properties).\n• You can generate Samples and Screenshots of your video as well.\n• Last but not the least, you can get all the basic details regarding your video under the tab 'MEDIA INFO'.\n✦ Enn ningalude swontham @sanin_c",
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
