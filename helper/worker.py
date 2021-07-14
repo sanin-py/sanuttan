@@ -35,7 +35,7 @@ async def screenshot(e):
         await e.client.send_file(e.chat_id, pic)
         await e.client.send_message(
             e.chat_id,
-            "As you commanded, your highness.",
+            "Screenshots! as you commanded, your highness.",
             buttons=[
                 [
                     Button.inline("GENERATE SAMPLE", data=f"gsmpl{wah}"),
@@ -87,7 +87,7 @@ async def encc(e):
         er = stderr.decode()
         try:
             if er:
-                await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+                await e.edit(str(er) + "\n\n**ERROR** Contact @sanin_c")
                 COUNT.remove(e.chat_id)
                 os.remove(dl)
                 return os.remove(out)
@@ -157,7 +157,7 @@ async def sample(e):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+            await e.edit(str(er) + "\n\n**ERROR** Contact @sanin_c")
             COUNT.remove(e.chat_id)
             os.remove(dl)
             os.remove(out)
