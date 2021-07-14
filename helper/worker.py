@@ -35,7 +35,7 @@ async def screenshot(e):
         await e.client.send_file(e.chat_id, pic)
         await e.client.send_message(
             e.chat_id,
-            "Check Screenshots Above 😁",
+            "As you commanded, your highness.",
             buttons=[
                 [
                     Button.inline("GENERATE SAMPLE", data=f"gsmpl{wah}"),
@@ -62,7 +62,7 @@ async def stats(e):
         ans = f"Downloaded:\n{ov}\n\nCompressing:\n{ot}"
         await e.answer(ans, cache_time=0, alert=True)
     except BaseException:
-        await e.answer("Someting Went Wrong 🤔\nResend Media", cache_time=0, alert=True)
+        await e.answer("Someting went wrong 🤔\nResend media", cache_time=0, alert=True)
 
 
 async def encc(e):
@@ -73,7 +73,7 @@ async def encc(e):
         wh = decode(wah)
         out, dl, thum, dtime = wh.split(";")
         nn = await e.edit(
-            "`Compressing..`",
+            "`Compressing...`",
             buttons=[
                 [Button.inline("STATS", data=f"stats{wah}")],
                 [Button.inline("CANCEL PROCESS", data=f"skip{wah}")],
@@ -123,7 +123,7 @@ async def encc(e):
         a1 = await info(dl, e)
         a2 = await info(out, e)
         dk = await ds.reply(
-            f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMediainfo: [Before]({a1})//[After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}",
+            f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMedia info: [Before]({a1})//[After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}",
             link_preview=False,
         )
         await ds.forward_to(LOG)
@@ -208,7 +208,7 @@ async def encod(event):
             oc = event.fwd_from.from_id.user_id
             occ = (await event.client.get_me()).id
             if oc == occ:
-                return await event.reply("`This Video File is already Compressed 😑😑.`")
+                return await event.reply("`This video file is already compressed 😑.`")
         except BaseException:
             pass
         xxx = await event.reply("`Downloading...`")
@@ -229,7 +229,7 @@ async def encod(event):
             )
         if user.id in COUNT and user.id != OWNER:
             return await xxx.edit(
-                "Already Your 1 Request Processing\nKindly Wait For it to Finish"
+                "Already Your 1 Request Processing\nKindly wait for it to finish"
             )
         COUNT.append(user.id)
         s = dt.now()
@@ -238,7 +238,7 @@ async def encod(event):
         gg = await event.client.get_entity(user.id)
         name = f"[{get_display_name(gg)}](tg://user?id={user.id})"
         await event.client.send_message(
-            LOG, f"{len(COUNT)} Downloading Started for user - {name}"
+            LOG, f"{len(COUNT)} Downloading started for user - {name}"
         )
         dir = f"downloads/{user.id}/"
         if not os.path.isdir(dir):
@@ -297,13 +297,13 @@ async def encod(event):
         COUNT.remove(user.id)
         await event.client.send_message(
             event.chat_id,
-            f"🐠DOWNLODING COMPLETED!!🐠",
+            f"DOWNLODING COMPLETED!!",
             buttons=[
                 [
                     Button.inline("GENERATE SAMPLE", data=f"gsmpl{key}"),
                     Button.inline("SCREENSHOTS", data=f"sshot{key}"),
                 ],
-                [Button.url("MEDIAINFO", url=inf)],
+                [Button.url("MEDIA INFO", url=inf)],
                 [Button.inline("COMPRESS", data=f"sencc{key}")],
             ],
         )
@@ -333,7 +333,7 @@ async def customenc(e, key):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+            await e.edit(str(er) + "\n\n**ERROR** Contact @sanin_c")
             COUNT.remove(e.chat_id)
             os.remove(dl)
             return os.remove(out)
@@ -376,7 +376,7 @@ async def customenc(e, key):
     a1 = await info(dl, e)
     a2 = await info(out, e)
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMediainfo: [Before]({a1})//[After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}",
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMedia info: [Before]({a1})//[After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}",
         link_preview=False,
     )
     await ds.forward_to(LOG)
