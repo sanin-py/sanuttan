@@ -33,7 +33,7 @@ async def start(event):
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
-               Button.url("DEVELOPER", url="t.me/sanin_c"),
+               Button.url("DEVELOPER", url="https://www.instagram.com/sanin.info/"),
             ],
         ],
     )
@@ -59,7 +59,7 @@ async def beck(event):
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
-               Button.url("DEVELOPER", url="t.me/sanin_c"),
+               Button.url("DEVELOPER", url="https://www.instagram.com/sanin.info/"),
             ],
         ],
     )
@@ -82,7 +82,7 @@ async def sencc(e):
 async def back(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "🐠  **What To Do** 🐠",
+        "**What to do**",
         buttons=[
             [
                 Button.inline("GENERATE SAMPLE", data=f"gsmpl{key}"),
