@@ -62,7 +62,7 @@ async def stats(e):
         ans = f"Downloaded:\n{ov}\n\nCompressing:\n{ot}"
         await e.answer(ans, cache_time=0, alert=True)
     except BaseException:
-        await e.answer("Someting went wrong 🤔\nResend media", cache_time=0, alert=True)
+        await e.answer("Something went wrong 🤔\nResend the media", cache_time=0, alert=True)
 
 
 async def encc(e):
