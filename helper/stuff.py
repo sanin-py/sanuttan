@@ -109,7 +109,7 @@ async def ccom(e):
             g = repl.text + ".mkv"
         outt = f"encode/{chat}/{g}"
         x = await repl.reply(
-            f"Custom File Name : {g}\nNow, send a Thumbnail Picture for your video file.\nDo it fast, time could run out."
+            f"Custom File Name : {g}\nNow, send a Thumbnail Picture for your video file.\nTry to send the Thumbnail Picture as **photo** and not as file.\nDo it fast, time could run out."
         )
         replyy = cv.wait_event(events.NewMessage(from_users=chat))
         rep = await replyy
