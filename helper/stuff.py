@@ -94,7 +94,7 @@ async def back(e):
 
 
 async def ccom(e):
-    await e.edit("Send your custom name for that file")
+    await e.edit("Type and send any random name that you would like to name your file.\nDo it fast, time could run out.")
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     out, dl, thum, dtime = wh.split(";")
@@ -109,7 +109,7 @@ async def ccom(e):
             g = repl.text + ".mkv"
         outt = f"encode/{chat}/{g}"
         x = await repl.reply(
-            f"Custom File Name : {g}\n\nSend Thumbnail Picture for it."
+            f"Custom File Name : {g}\nNow, send a Thumbnail Picture for your video file.\nDo it fast, time could run out."
         )
         replyy = cv.wait_event(events.NewMessage(from_users=chat))
         rep = await replyy
